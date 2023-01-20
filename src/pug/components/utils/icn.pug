@@ -1,0 +1,3 @@
+mixin icn(name, width, height, title)
+  svg.icn(width=width, height=height, aria-hidden="true", title=title)&attributes(attributes)
+    use(xlink:href="#" + name)

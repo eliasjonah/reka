@@ -1,0 +1,84 @@
+// Base
+$width: 1200px;
+$bg: #eee;
+$url-img: '../img/bg';
+$url-font: '../fonts';
+
+// Fonts
+$font-base-size: 16px;
+$font-base-lh: #{calc(22px / 16px)};
+$font-default: 'Arial', 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+$form-line-height: #{calc(22px / 16px)};
+
+// Colors
+$color-white: #fff;
+$color-black: #000;
+
+$color-transperent: rgba(255, 255, 255, 0);
+$color-white-transperent: rgba(255, 255, 255, 0.6);
+$color-black-transperent: rgba(0, 0, 0, 0.6);
+$color-green-transperent: rgba(64, 181, 173, 0.6);
+
+$color-gray: #f7f7f7;
+$color-gray-dark: #d9d9d9;
+$color-green: #40B5AD;
+$color-light-green: #b6dfdd;
+$color-main: #f5da5a;
+$color-accent: #5983d5;
+$color-muted: lighten($color-main, 20%);
+$color-border: #ccc;
+
+$color-link: red;
+$color-link-hover: blue;
+
+// Shadow
+$shadow-input: 0 2px 8px rgba($color-black, 0.08);
+
+
+// Safe font-family
+$font-Arial: 'Arial', 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+$font-ArialBlack: 'Arial Black', 'Helvetica CY', 'Nimbus Sans L' sans-serif;
+$font-ComicSans: 'Comic Sans MS', 'Monaco CY', cursive;
+$font-Courier: 'Courier New', 'Nimbus Mono L', monospace;
+$font-Georgia: 'Georgia', 'Century Schoolbook L', serif;
+$font-Impact: 'Impact', 'Charcoal CY', sans-serif;
+$font-LucidaConsole: 'Lucida Console', 'Monaco', monospace;
+$font-LucidaSans: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+$font-Palatino: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+$font-Tahoma: 'Tahoma', 'Geneva CY', sans-serif;
+$font-TimesNew: 'Times New Roman', 'Times CY', 'Nimbus Roman No9 L', serif;
+$font-Trebuchet: 'Trebuchet MS', 'Helvetica CY', sans-serif;
+$font-Verdana: 'Verdana', 'Geneva CY', 'DejaVu Sans', sans-serif;
+
+// Transitions (https://easings.net/ru)
+$trans-fast: 0.1s ease;
+$trans-base: 0.3s ease;
+$trans-long: 0.5s ease;
+
+// Font
+$font-base-size: 16px;
+$font-base-lh: #{calc(22px / 16px)};
+$font-family: $font-Trebuchet;
+$form-line-height: 1.25;
+
+// Forms
+$field-base: 40px;
+$btn-line-height: $form-line-height;
+
+// Z-index
+$z-header: 99;
+$z-menu: 98;
+
+// Media
+$media-last: 375px;
+$media-phone: 480px;
+$media-smartphone: 620px;
+$media-tablet: 768px;
+$media-notebook: 960px;
+$media-desktop: 1024px;
+$media-hd: 1280px;
+$media-fullhd: 1920px;
+
+// Retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
