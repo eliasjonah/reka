@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=""><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- CSS only -->
+    <link rel="stylesheet" href="css/style.css?1674398274915">
+  </head>
+  <body>
+    <noscript>
+      <div class="noscript">JavaScript must be enabled for the site to function properly!</div>
+    </noscript>
+    <script>
+      (() => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', './img/sprite.svg', true);
+        xhr.send();
+        xhr.onload = function() {
+          var div = document.createElement('div');
+          div.className = 'visually-hidden';
+          div.innerHTML = xhr.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+      })();
+      
+    </script>
+    <div class="page">
+      <div class="page__core">
+        <header class="header">
+          <div class="header__inner">
+            <div class="header__logo">
+              <svg class="icn" width="70" height="24" aria-hidden="true">
+                <use xlink:href="#icn-logo"></use>
+              </svg>
+            </div>
+            <div class="header__nav">
+              <div class="header__nav-item"><span>управление недвижимостью</span>
+                <div class="header__icon"></div>
+              </div>
+              <div class="header__nav-item"><span>продажа и аренда</span></div>
+              <div class="header__nav-item"><span>консалтинг</span>
+                <div class="header__icon"></div>
+              </div>
+            </div>
+            <button class="header__link"><span>связаться с нами</span>
+              <svg class="icn header__arrow" width="16" height="16" aria-hidden="true">
+                <use xlink:href="#icn-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </header>
+        <h1>Hello World, and let's start to project with Dzen.</h1>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="js/libs.js"></script>
+<script src="js/main.js"></script>

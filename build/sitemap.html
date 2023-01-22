@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Список страниц</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=""><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- CSS only -->
+    <link rel="stylesheet" href="css/style.css?1674398274915">
+  </head>
+  <body>
+    <noscript>
+      <div class="noscript">JavaScript must be enabled for the site to function properly!</div>
+    </noscript>
+    <script>
+      (() => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', './img/sprite.svg', true);
+        xhr.send();
+        xhr.onload = function() {
+          var div = document.createElement('div');
+          div.className = 'visually-hidden';
+          div.innerHTML = xhr.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+      })();
+      
+    </script>
+    <div class="page">
+      <div class="page__core">
+        <style>
+          .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          h1 {
+            font-size: 24px;
+            line-height: 28px;
+            margin: 0 0 20px;
+            font-weight: 400;
+          }
+          
+          a {
+            color: rgba(233, 242, 243, 0.6);
+          }
+          
+          a:hover {
+            color: rgba(233, 242, 243, 0.8);
+            text-decoration: underline;
+          }
+          
+          .wrapper {
+            border-radius: 20px;
+            padding: 20px;
+            width: 500px;
+            margin: auto;
+            background: #7482FF;
+          }
+          
+          ol {
+            color: rgba(233, 242, 243, 0.6);
+            list-style-type: decimal;
+            margin: 0 0 0 20px;
+          }
+          
+          li {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 7px;
+          }
+          
+        </style>
+        <main class="container">
+          <div class="wrapper">
+            <h1>Список страниц</h1>
+            <ol>
+              <li><a href="ui-kit.html">UI-kit — ui-kit.html</a></li>
+              <li><a href="index.html">Главная — index.html</a></li>
+              <li><a href="404.html">Ошибка — 404.html</a></li>
+            </ol>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="js/libs.js"></script>
+<script src="js/main.js"></script>
