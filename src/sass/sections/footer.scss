@@ -1,3 +1,189 @@
 .footer {
+  height: 100vh;
+  border: 1px solid $color-border-dark;
+  background-color: $color-black;
 
+  &__inner {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: block;
+    width: 100%;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 1px solid $color-border-dark;
+    border-bottom: 1px solid $color-border-dark;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 16px;
+      position: absolute;
+      background-color: $color-border-dark;
+      top: 50%;
+      right: 0;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__foot {
+    margin-left: 150px;
+    border-left: 1px solid $color-border-dark;
+  }
+
+  &__contact {
+    padding: 44px 40px 56px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-border-dark;
+  }
+
+  &__address {
+    max-width: 274px;
+    width: 100%;
+  }
+
+  &__header {
+    margin-bottom: 8px;
+    color: $color-white;
+    @include font-size(20px, 28px);
+    font-weight: 500;
+  }
+
+  &__offer {
+    margin-bottom: 8px;
+    color: $color-white;
+    @include font-size(20px, 28px);
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    overflow-y: hidden;
+    transition: opacity $trans-base;
+    color: $color-transperent;
+
+    &:hover {
+      color: $color-transperent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &::before,
+    &::after {
+      content: attr(data-offer);
+      display: block;
+      position: absolute;
+      min-width: max-content;
+      color: $color-white;
+      transition: transform $trans-base;
+    }
+
+    &::before {
+      left: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      left: 0;
+      bottom: -100%;
+      color: $color-main;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      transform: translateY(-100%);
+    }
+  }
+
+  &__subheader {
+    margin-bottom: 8px;
+    color: $color-gray-dark;
+    @include font-size(12px, 12px);
+    font-weight: 500;
+  }
+
+  &__link {
+    color: $color-gray-dark;
+    @include font-size(12px, 16px);
+    font-weight: 500;
+    transition: color $trans-base, opacity $trans-base;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  &__logo {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    color: $color-white;
+    border-radius: 100px;
+    background-color: $color-border-dark;
+    transition: color $trans-base, opacity $trans-base;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__end {
+    padding: 12px 40px 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__about {
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 24px;
+  }
+
+  &__company {
+    color: $color-gray-dark;
+    @include font-size(12px, 12px);
+    font-weight: 500;
+  }
 }

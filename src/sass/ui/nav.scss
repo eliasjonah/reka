@@ -1,0 +1,75 @@
+.nav {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 8px;
+    cursor: pointer;
+    color: $color-black;
+    text-decoration: none;
+    transition: color $trans-base, opacity $trans-base;
+    @include font-size(18px, 16px);
+    font-weight: 500;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &:active {
+      opacity: 0.7;
+      color: $color-main;
+    }
+
+    &--color-white {
+      color: $color-white;
+
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+
+    &__icon {
+      border-radius: 100px;
+      border: 1px solid $color-border;
+      position: relative;
+      width: 16px;
+      height: 16px;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 6px;
+        background-color: $color-black;
+        left: 6px;
+        top: 4px;
+        transition: transform $trans-base;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:hover &__icon {
+      &::before {
+        transform: rotate(-90deg);
+        transition: transform $trans-base;
+      }
+
+      &::after {
+        transform: rotate(-90deg);
+        transition: transform $trans-base;
+      }
+    }
+
+    &--color-white &__icon {
+      &::before,
+      &::after {
+        background-color: $color-white;
+      }
+    }
+  }

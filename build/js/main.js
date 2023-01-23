@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/scroll-width */ \"./js/utils/scroll-width.js\");\n/* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ \"./js/utils/ios-vh-fix.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  Object(_utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__[\"setScrollWidth\"])();\n  Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__[\"iosVhFix\"])();\n});\n\n// в load следует добавить скрипты, не участвующие в работе первого экрана\nwindow.addEventListener('load', () => {});\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/scroll-width */ \"./js/utils/scroll-width.js\");\n/* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ \"./js/utils/ios-vh-fix.js\");\n/* harmony import */ var _modules_ticker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ticker */ \"./js/modules/ticker.js\");\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  Object(_utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__[\"setScrollWidth\"])();\n  Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__[\"iosVhFix\"])();\n});\n\n// в load следует добавить скрипты, не участвующие в работе первого экрана\nwindow.addEventListener('load', () => {\n  Object(_modules_ticker__WEBPACK_IMPORTED_MODULE_2__[\"ticker\"])();\n});\n\n//# sourceURL=webpack:///./js/main.js?");
+
+/***/ }),
+
+/***/ "./js/modules/ticker.js":
+/*!******************************!*\
+  !*** ./js/modules/ticker.js ***!
+  \******************************/
+/*! exports provided: ticker */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ticker\", function() { return ticker; });\nconst ticker = () => {\n  const tickerLeft = document.querySelectorAll('.ticker-left');\n  const tickerRight = document.querySelector('.ticker-right');\n  const cursor = document.querySelector('.cursor');\n\n  // Scroll\n  window.onscroll = () => {\n    let pos = window.scrollY - 800;\n    tickerRight.style.right = `${pos}px`;\n    tickerLeft.forEach(item => {\n      item.style.left = `${pos}px`;\n    });\n  };\n\n  // Cursor\n  document.addEventListener('mousemove', e => {\n    cursor.style.left = e.clientX + 'px';\n    cursor.style.top = e.clientY + 'px';\n  });\n};\n\n\n//# sourceURL=webpack:///./js/modules/ticker.js?");
 
 /***/ }),
 

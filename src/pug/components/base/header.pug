@@ -1,17 +1,18 @@
 mixin header(headerMods, currentUrl)
   header.header(class=headerMods)
     .header__inner
-      .header__logo
+      .logo
         +icn('icn-logo', 70, 24)
       .header__nav
-        .header__nav-item
+        a(href="#").nav
           span управление недвижимостью
-          .header__icon
-        .header__nav-item
+          .nav__icon
+        a(href="#").nav
           span продажа и аренда
-        .header__nav-item
+        a(href="#").nav
           span консалтинг
-          .header__icon
-      button.header__link
-        span связаться с нами
-        +icn('icn-arrow', 16, 16).header__arrow
+          .nav__icon
+      button.btn
+        .btn__text
+          span связаться с нами
+          +icn('icn-arrow', 16, 16).btn__arrow

@@ -1,0 +1,15 @@
+.logo {
+  display: block;
+  padding: 20px 40px;
+  border-right: 1px solid $color-border;
+  color: $color-black;
+
+  &--color-white {
+    color: $color-white;
+    border-right: 1px solid $color-border-dark;
+  }
+
+  svg {
+    display: block;
+  }
+}
