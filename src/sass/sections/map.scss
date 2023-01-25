@@ -1,0 +1,60 @@
+.map {
+  margin: 0 40px 450px 40px;
+  position: relative;
+
+  &__inner {
+    position: absolute;
+    z-index: 5;
+    height: 620px;
+    width: 100%;
+    background-size: auto 100%;
+    transform: translateY(-170px);
+    background-color: $color-white;
+    box-shadow: 0px 64px 72px rgba(46, 46, 46, 0.03), 0px 32px 32px rgba(46, 46, 46, 0.02), 0px 12px 12px rgba(46, 46, 46, 0.01);
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(../img/bg/map-desk.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &__header {
+    padding: 28px 40px 40px 40px;
+    max-width: 384px;
+    font-family: "DrukCyr";
+    @include font-size(72px, 72px);
+    font-weight: 500;
+  }
+
+  &__foot {
+    padding: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 40px;
+  }
+
+  &__info {
+    max-width: 180px;
+    width: auto;
+  }
+
+  &__subheader {
+    margin-bottom: 8px;
+    font-family: "DrukCyr";
+    @include font-size(48px, 48px);
+    font-weight: 500;
+  }
+
+  &__text {
+    @include font-size(16px, 16px);
+    font-weight: 500;
+    color: $color-gray-secondary;
+  }
+}
