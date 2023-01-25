@@ -1,0 +1,32 @@
+mixin workers-section()
+
+  section.workers
+    .workers__inner
+      h2.workers__header С кем мы сотрудничаем
+      .workers__cards
+        a(href="#").workers__item
+          +icn('icn-business', 158, 266).workers__icn
+          .workers__content
+            h4.workers__subheader С арендодателями
+            p.workers__text Берём на себя все заботы по управлению помещениями: ищем арендаторов, решаем юридические вопросы, готовим налоговые отчёты и нанимаем персонал.
+          .workers__more
+            span подробнее
+            +icn('icn-arrow', 16, 16).workers__arrow
+
+        a(href="#").workers__item
+          +icn('icn-invest', 233, 266).workers__icn
+          .workers__content
+            h4.workers__subheader С инвесторами и бизнесом
+            p.workers__text Подбираем помещения под любую задачу. Бизнесу — под офисы и склады. Инвесторам — коммерческую недвижимость, которую можно будет сдавать в аренду.
+          .workers__more
+            span подробнее
+            +icn('icn-arrow', 16, 16).workers__arrow
+
+        a(href="#").workers__item
+          +icn('icn-company', 290, 266).workers__icn
+          .workers__content
+            h4.workers__subheader С другими управляющими компаниями
+            p.workers__text Предоставляем услуги своей аварийно-диспетчерской службы: устраняем поломки и следим за исправностью всех внутридомовых систем.
+          .workers__more
+            span подробнее
+            +icn('icn-arrow', 16, 16).workers__arrow
