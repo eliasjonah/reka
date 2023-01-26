@@ -1,29 +1,27 @@
 const ticker = () => {
-  const tickerLeft = document.querySelectorAll('.ticker-left');
-  const tickerRight = document.querySelector('.ticker-right');
   const cursor = document.querySelector('.cursor');
-  const wrapper = document.querySelector('.ticker__wrapper');
-  const ticker = document.querySelector('.ticker__item');
-  let list2;
+  const wrapper1 = document.querySelector('#wrapper_1');
+  const ticker1 = document.querySelector('#ticker_1');
+  let list1;
 
   const speed = 1;
 
-  const width = ticker.offsetWidth;
+  const width = ticker1.offsetWidth;
   let x = 0;
   let x2 = width;
 
-  function clone() {
-    list2 = ticker.cloneNode(true);
-    wrapper.appendChild(list2);
-    list2.style.transform = `translateX(${width}px)`;
-  }
+  // ticker_1
 
+  function clone() {
+    list1 = ticker1.cloneNode(true);
+    wrapper1.appendChild(list1);
+    list1.style.left = `${width}px`;
+  }
 
   function moveFirst() {
     x -= speed;
-
     if (width >= Math.abs(x)) {
-      ticker.style.transform = `translateX(${x}px)`;
+      ticker1.style.left = `${x}px`;
     } else {
       x = width;
     }
@@ -31,33 +29,14 @@ const ticker = () => {
 
   function moveSecond() {
     x2 -= speed;
-
-    if (list2.offsetWidth >= Math.abs(x2)) {
-      list2.style.transform = `translateX(${x2}px)`;
+    if (list1.offsetWidth >= Math.abs(x2)) {
+      list1.style.left = `${x2}px`;
     } else {
       x2 = width;
     }
   }
 
   // ss
-
-  // function scroll() {
-  //   window.addEventListener("scroll", () => {
-  //     clearInterval(a);
-  //     clearInterval(b);
-  //     let pos = window.scrollY - 100;
-  //     ticker.style.left = `${pos}px`;
-  //     list2.style.left = `${pos}px`;
-  //   });
-    // window.onscroll = () => {
-    //   clearInterval(a);
-    //   clearInterval(b);
-    //   let pos = window.scrollY - 100;
-    //   ticker.style.left = `${pos}px`;
-    //   list2.style.left = `${pos}px`;
-    // };
-  // }
-
 
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
@@ -67,7 +46,6 @@ const ticker = () => {
   clone();
   let a = setInterval(moveFirst, 10);
   let b = setInterval(moveSecond, 10);
-  // scroll();
 };
 
 
