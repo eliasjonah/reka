@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/scroll-width */ \"./js/utils/scroll-width.js\");\n/* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ \"./js/utils/ios-vh-fix.js\");\n/* harmony import */ var _modules_ticker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ticker */ \"./js/modules/ticker.js\");\n/* harmony import */ var _modules_ticker2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ticker2 */ \"./js/modules/ticker2.js\");\n/* harmony import */ var _modules_ticker3__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ticker3 */ \"./js/modules/ticker3.js\");\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  Object(_utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__[\"setScrollWidth\"])();\n  Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__[\"iosVhFix\"])();\n});\n\n// в load следует добавить скрипты, не участвующие в работе первого экрана\nwindow.addEventListener('load', () => {\n  Object(_modules_ticker__WEBPACK_IMPORTED_MODULE_2__[\"ticker\"])();\n  Object(_modules_ticker2__WEBPACK_IMPORTED_MODULE_3__[\"ticker2\"])();\n  Object(_modules_ticker3__WEBPACK_IMPORTED_MODULE_4__[\"ticker3\"])();\n});\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/scroll-width */ \"./js/utils/scroll-width.js\");\n/* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ \"./js/utils/ios-vh-fix.js\");\n/* harmony import */ var _modules_ticker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ticker */ \"./js/modules/ticker.js\");\n/* harmony import */ var _modules_ticker2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ticker2 */ \"./js/modules/ticker2.js\");\n/* harmony import */ var _modules_ticker3__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ticker3 */ \"./js/modules/ticker3.js\");\n/* harmony import */ var _modules_powers_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/powers-slider */ \"./js/modules/powers-slider.js\");\n\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  Object(_utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__[\"setScrollWidth\"])();\n  Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__[\"iosVhFix\"])();\n});\n\n// в load следует добавить скрипты, не участвующие в работе первого экрана\nwindow.addEventListener('load', () => {\n  // ticker();\n  // ticker2();\n  // ticker3();\n  Object(_modules_powers_slider__WEBPACK_IMPORTED_MODULE_5__[\"powersSlider\"])();\n});\n\n//# sourceURL=webpack:///./js/main.js?");
+
+/***/ }),
+
+/***/ "./js/modules/powers-slider.js":
+/*!*************************************!*\
+  !*** ./js/modules/powers-slider.js ***!
+  \*************************************/
+/*! exports provided: powersSlider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"powersSlider\", function() { return powersSlider; });\nfunction powersSlider() {\n  const swiper = new Swiper('.powers__slider', {\n    loop: true,\n    speed: 1500,\n    slidesPerView: '2',\n    autoplay: {\n      delay: 3000,\n      disableOnInteraction: false\n    },\n    navigation: {\n      nextEl: '.powers__btn--next',\n      prevEl: '.powers__btn--prev'\n    }\n  });\n}\n\n\n//# sourceURL=webpack:///./js/modules/powers-slider.js?");
 
 /***/ }),
 

@@ -3,12 +3,66 @@ mixin powers-section()
   section.powers
     .powers__inner
       h2.powers__header Нас выбирают, потому что мы автоматизируем все процессы и предлагаем комплексные решения
-    .powers__items
       .powers__item
-        .powers__left
+        .powers__content
           .powers__count 01
-          .powers__content
+          .powers__info
             h3.powers__subheader Клиенты «Реки ФМ» следят за расходами онлайн
             p.powers__text Для этого у нас есть программа Oddin. Там мы публикуем отчёты о проделанной работе, например если заменили лампочку или устранили аварию. Всё с фото, датами и чеками.
-        .powers__aside
-          //- +img('content', 'hero-mask', 'png').powers__img
+        .powers__img
+          +img('content', 'woman', 'jpg')
+
+      .powers__item
+        .powers__content
+          .powers__count 02
+          .powers__info
+            h3.powers__subheader Налаживаем управление и эксплуатацию зданием с нуля
+            p.powers__text Оснащаем техникой, например системой дымоудаления или сигнализацией. Нанимаем персонал в охрану, клининг и администрацию.
+        .powers__img
+          +img('content', 'office', 'jpg')
+
+      .powers__item
+        .powers__content
+          .powers__count 03
+          .powers__info
+            h3.powers__subheader Наша команда — эксперты в управлении недвижимостью
+            p.powers__text Они знают, как организовать процессы, чтобы доход клиента был максимальным, а участие в администрировании — минимальным.
+        .powers__slider
+          .swiper-wrapper.powers__wrapper
+            .swiper-slide.powers__slide
+              .powers__picture
+                  +img('content', 'person', 'jpg')
+              .powers__person
+                .powers__post генеральный директор
+                .powers__name Будкевич Василий Викторович
+                .powers__about Опыт работы в сфере недвижимости, в том числе международной с 2007 года
+                .powers__contact
+                  .powers__number +7 (927) 263-16-96
+                  .powers__email v.budkevich@reka.fm
+
+            .swiper-slide.powers__slide
+              .powers__picture
+                  +img('content', 'person', 'jpg')
+              .powers__person
+                .powers__post генеральный директор
+                .powers__name Будкевич Василий Викторович
+                .powers__about Опыт работы в сфере недвижимости, в том числе международной с 2007 года
+                .powers__contact
+                  .powers__number +7 (927) 263-16-96
+                  .powers__email v.budkevich@reka.fm
+
+            .swiper-slide.powers__slide
+              .powers__picture
+                  +img('content', 'person', 'jpg')
+              .powers__person
+                .powers__post генеральный директор
+                .powers__name Будкевич Василий Викторович
+                .powers__about Опыт работы в сфере недвижимости, в том числе международной с 2007 года
+                .powers__contact
+                  .powers__number +7 (927) 263-16-96
+                  .powers__email v.budkevich@reka.fm
+          .powers__buttons
+            .powers__btn.powers__btn--prev
+              +icn('icn-arrow', 20, 28).powers__icn
+            .powers__btn.powers__btn--next
+              +icn('icn-arrow', 20, 28).powers__icn

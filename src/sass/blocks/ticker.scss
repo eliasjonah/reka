@@ -14,20 +14,19 @@
 
   &__inner {
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
   }
 
   &__wrapper {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 40px;
     width: 100vw;
-    height: 72px;
-    margin-bottom: 4px;
+    height: 76px;
+    padding-bottom: 4px;
 
     &:last-child {
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 
