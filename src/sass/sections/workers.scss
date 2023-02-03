@@ -1,7 +1,11 @@
 .workers {
   padding-top: 140px;
   padding-bottom: 96px;
-  margin: 0 40px;
+  background-color: $color-white;
+
+  &__inner {
+    margin: 0 40px;
+  }
 
 
   &__header {
@@ -29,11 +33,15 @@
     gap: 24px;
     text-decoration: none;
     color: $color-black;
-    transition: color $trans-long;
+    transition: color $trans-long, opacity $trans-base;
     position: relative;
 
     &:hover {
       color: $color-white;
+    }
+
+    &:active {
+      opacity: 0.7;
     }
 
     &:after {

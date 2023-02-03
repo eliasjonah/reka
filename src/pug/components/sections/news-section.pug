@@ -2,4 +2,34 @@ mixin news-section()
 
   section.news
     .news__inner
-      .news__content ss
+      .news__head
+        h2.news__header Наши новости
+        a(href="#").btn.news__btn
+          .btn__text
+            span все новости
+            +icn('icn-arrow', 20, 28).btn__arrow
+      .news__wrapper
+        a(href="#").news__card
+          .news__picture
+            +img('content', 'news_1', 'jpg')
+          .news__content
+            .news__date 02.03.22
+            h3.news__subheader Retail & Development Brunch
+            .news__text Также как реализация намеченных плановых заданий предполагает независимые способы реализации плановых заданий предполагает независимые дальнейших действий.
+        a(href="#").news__card
+          .news__picture
+            +img('content', 'news_2', 'jpg')
+          .news__content
+            .news__date 22.02.22
+            h3.news__subheader Deliveries of new materials
+            .news__text Также как реализация намеченных плановых заданий предполагает независимые способы реализации плановых заданий предполагает независимые дальнейших действий.
+
+        .news__group
+          a(href="#").news__item
+            .news__date 22.02.22
+            h3.news__subheader Длинный заголовок новости в две строки
+            .news__text Также как реализация намеченных плановых заданий предполагает независимые способы реализации плановых заданий предполагает независимые дальнейших действий.
+          a(href="#").news__item
+            .news__date 22.02.22
+            h3.news__subheader Заголовок новости
+            .news__text Также как реализация намеченных плановых заданий предполагает независимые способы реализации плановых заданий предполагает независимые дальнейших действий.

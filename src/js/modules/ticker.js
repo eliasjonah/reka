@@ -1,27 +1,26 @@
 const ticker = () => {
+  const page = document.querySelector('.page');
   const cursor = document.querySelector('.cursor');
-  const wrapper1 = document.querySelector('#wrapper_1');
-  const ticker1 = document.querySelector('#ticker_1');
-  let list1;
+  const tickerWrapper = document.querySelector('.ticker__wrapper');
+  const ticker = document.querySelector('.ticker__item');
+  let list;
 
   const speed = 1;
 
-  const width = ticker1.offsetWidth;
+  const width = ticker.offsetWidth;
   let x = 0;
   let x2 = width;
 
-  // ticker_1
-
   function clone() {
-    list1 = ticker1.cloneNode(true);
-    wrapper1.appendChild(list1);
-    list1.style.left = `${width}px`;
+    list = ticker.cloneNode(true);
+    tickerWrapper.appendChild(list);
+    list.style.transform = `translateX(${width}px)`;
   }
 
   function moveFirst() {
     x -= speed;
     if (width >= Math.abs(x)) {
-      ticker1.style.left = `${x}px`;
+      ticker.style.transform = `translateX(${x}px)`;
     } else {
       x = width;
     }
@@ -29,14 +28,19 @@ const ticker = () => {
 
   function moveSecond() {
     x2 -= speed;
-    if (list1.offsetWidth >= Math.abs(x2)) {
-      list1.style.left = `${x2}px`;
+    if (list.offsetWidth >= Math.abs(x2)) {
+      list.style.transform = `translateX(${x2}px)`;
     } else {
       x2 = width;
     }
   }
 
-  // ss
+  document.addEventListener('wheel', () => {
+    let pos = window.scrollY - page.scrollHeight;
+    ticker.style.left = `${pos}px`;
+    list.style.left = `${pos}px`;
+  });
+
 
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
@@ -44,9 +48,15 @@ const ticker = () => {
   });
 
   clone();
-  let a = setInterval(moveFirst, 10);
-  let b = setInterval(moveSecond, 10);
+  setInterval(moveFirst, 15);
+  setInterval(moveSecond, 15);
 };
 
 
 export {ticker};
+
+
+
+
+
+
