@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/scroll-width */ \"./js/utils/scroll-width.js\");\n/* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ \"./js/utils/ios-vh-fix.js\");\n/* harmony import */ var _modules_powers_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/powers-slider */ \"./js/modules/powers-slider.js\");\n/* harmony import */ var _modules_ticker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ticker */ \"./js/modules/ticker.js\");\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  Object(_utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__[\"setScrollWidth\"])();\n  Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__[\"iosVhFix\"])();\n});\n\n// в load следует добавить скрипты, не участвующие в работе первого экрана\nwindow.addEventListener('load', () => {\n  Object(_modules_powers_slider__WEBPACK_IMPORTED_MODULE_2__[\"powersSlider\"])();\n  Object(_modules_ticker__WEBPACK_IMPORTED_MODULE_3__[\"ticker\"])();\n});\n\n//# sourceURL=webpack:///./js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/scroll-width */ \"./js/utils/scroll-width.js\");\n/* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ \"./js/utils/ios-vh-fix.js\");\n/* harmony import */ var _modules_powers_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/powers-slider */ \"./js/modules/powers-slider.js\");\n/* harmony import */ var _modules_ticker_1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/ticker-1 */ \"./js/modules/ticker-1.js\");\n/* harmony import */ var _modules_ticker_2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ticker-2 */ \"./js/modules/ticker-2.js\");\n/* harmony import */ var _modules_ticker_3__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/ticker-3 */ \"./js/modules/ticker-3.js\");\n\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  Object(_utils_scroll_width__WEBPACK_IMPORTED_MODULE_0__[\"setScrollWidth\"])();\n  Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__[\"iosVhFix\"])();\n});\n\n// в load следует добавить скрипты, не участвующие в работе первого экрана\nwindow.addEventListener('load', () => {\n  Object(_modules_powers_slider__WEBPACK_IMPORTED_MODULE_2__[\"powersSlider\"])();\n  Object(_modules_ticker_1__WEBPACK_IMPORTED_MODULE_3__[\"ticker1\"])();\n  Object(_modules_ticker_2__WEBPACK_IMPORTED_MODULE_4__[\"ticker2\"])();\n  Object(_modules_ticker_3__WEBPACK_IMPORTED_MODULE_5__[\"ticker3\"])();\n});\n\n//# sourceURL=webpack:///./js/main.js?");
 
 /***/ }),
 
@@ -110,15 +110,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "./js/modules/ticker.js":
-/*!******************************!*\
-  !*** ./js/modules/ticker.js ***!
-  \******************************/
-/*! exports provided: ticker */
+/***/ "./js/modules/ticker-1.js":
+/*!********************************!*\
+  !*** ./js/modules/ticker-1.js ***!
+  \********************************/
+/*! exports provided: ticker1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ticker\", function() { return ticker; });\nconst ticker = () => {\n  const page = document.querySelector('.page');\n  const cursor = document.querySelector('.cursor');\n  const tickerWrapper = document.querySelector('.ticker__wrapper');\n  const ticker = document.querySelector('.ticker__item');\n  let list;\n  const speed = 1;\n  const width = ticker.offsetWidth;\n  let x = 0;\n  let x2 = width;\n  function clone() {\n    list = ticker.cloneNode(true);\n    tickerWrapper.appendChild(list);\n    list.style.transform = `translateX(${width}px)`;\n  }\n  function moveFirst() {\n    x -= speed;\n    if (width >= Math.abs(x)) {\n      ticker.style.transform = `translateX(${x}px)`;\n    } else {\n      x = width;\n    }\n  }\n  function moveSecond() {\n    x2 -= speed;\n    if (list.offsetWidth >= Math.abs(x2)) {\n      list.style.transform = `translateX(${x2}px)`;\n    } else {\n      x2 = width;\n    }\n  }\n  document.addEventListener('wheel', () => {\n    let pos = window.scrollY - page.scrollHeight;\n    ticker.style.left = `${pos}px`;\n    list.style.left = `${pos}px`;\n  });\n  document.addEventListener('mousemove', e => {\n    cursor.style.left = e.clientX + 'px';\n    cursor.style.top = e.clientY + 'px';\n  });\n  clone();\n  setInterval(moveFirst, 15);\n  setInterval(moveSecond, 15);\n};\n\n\n//# sourceURL=webpack:///./js/modules/ticker.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ticker1\", function() { return ticker1; });\nconst ticker1 = () => {\n  const page = document.querySelector('.page');\n  const cursor = document.querySelector('.cursor');\n  const tickerWrapper = document.querySelector('#wrapper_1');\n  const ticker = document.querySelector('#ticker_1');\n  let list;\n  const speed = 1;\n  const width = ticker.offsetWidth;\n  let x = 0;\n  let x2 = width;\n  function clone() {\n    list = ticker.cloneNode(true);\n    tickerWrapper.appendChild(list);\n    list.style.transform = `translateX(${width}px)`;\n  }\n  function moveFirst() {\n    x -= speed;\n    if (width >= Math.abs(x)) {\n      ticker.style.transform = `translateX(${x}px)`;\n    } else {\n      x = width;\n    }\n  }\n  function moveSecond() {\n    x2 -= speed;\n    if (list.offsetWidth >= Math.abs(x2)) {\n      list.style.transform = `translateX(${x2}px)`;\n    } else {\n      x2 = width;\n    }\n  }\n  document.addEventListener('wheel', () => {\n    let pos = window.scrollY - page.scrollHeight;\n    ticker.style.left = `${pos}px`;\n    list.style.left = `${pos}px`;\n  });\n  document.addEventListener('mousemove', e => {\n    cursor.style.left = e.clientX + 'px';\n    cursor.style.top = e.clientY + 'px';\n  });\n  clone();\n  setInterval(moveFirst, 20);\n  setInterval(moveSecond, 20);\n};\n\n\n//# sourceURL=webpack:///./js/modules/ticker-1.js?");
+
+/***/ }),
+
+/***/ "./js/modules/ticker-2.js":
+/*!********************************!*\
+  !*** ./js/modules/ticker-2.js ***!
+  \********************************/
+/*! exports provided: ticker2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ticker2\", function() { return ticker2; });\nconst ticker2 = () => {\n  const page = document.querySelector('.page');\n  const cursor = document.querySelector('.cursor');\n  const tickerWrapper = document.querySelector('#wrapper_2');\n  const ticker = document.querySelector('#ticker_2');\n  let list;\n  const speed = 1;\n  const width = ticker.offsetWidth;\n  let x = 0;\n  let x2 = width;\n  function clone() {\n    list = ticker.cloneNode(true);\n    tickerWrapper.appendChild(list);\n    list.style.transform = `translateX(${-width}px)`;\n  }\n  function moveFirst() {\n    x -= speed;\n    if (width >= Math.abs(x)) {\n      ticker.style.transform = `translateX(${-x}px)`;\n    } else {\n      x = width;\n    }\n  }\n  function moveSecond() {\n    x2 -= speed;\n    if (list.offsetWidth >= Math.abs(x2)) {\n      list.style.transform = `translateX(${-x2}px)`;\n    } else {\n      x2 = width;\n    }\n  }\n  document.addEventListener('wheel', () => {\n    let pos = window.scrollY - page.scrollHeight;\n    ticker.style.right = `${pos}px`;\n    list.style.right = `${pos}px`;\n  });\n  document.addEventListener('mousemove', e => {\n    cursor.style.left = e.clientX + 'px';\n    cursor.style.top = e.clientY + 'px';\n  });\n  clone();\n  setInterval(moveFirst, 20);\n  setInterval(moveSecond, 20);\n};\n\n\n//# sourceURL=webpack:///./js/modules/ticker-2.js?");
+
+/***/ }),
+
+/***/ "./js/modules/ticker-3.js":
+/*!********************************!*\
+  !*** ./js/modules/ticker-3.js ***!
+  \********************************/
+/*! exports provided: ticker3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ticker3\", function() { return ticker3; });\nconst ticker3 = () => {\n  const page = document.querySelector('.page');\n  const cursor = document.querySelector('.cursor');\n  const tickerWrapper = document.querySelector('#wrapper_3');\n  const ticker = document.querySelector('#ticker_3');\n  let list;\n  const speed = 1;\n  const width = ticker.offsetWidth;\n  let x = 0;\n  let x2 = width;\n  function clone() {\n    list = ticker.cloneNode(true);\n    tickerWrapper.appendChild(list);\n    list.style.transform = `translateX(${width}px)`;\n  }\n  function moveFirst() {\n    x -= speed;\n    if (width >= Math.abs(x)) {\n      ticker.style.transform = `translateX(${x}px)`;\n    } else {\n      x = width;\n    }\n  }\n  function moveSecond() {\n    x2 -= speed;\n    if (list.offsetWidth >= Math.abs(x2)) {\n      list.style.transform = `translateX(${x2}px)`;\n    } else {\n      x2 = width;\n    }\n  }\n  document.addEventListener('wheel', () => {\n    let pos = window.scrollY - page.scrollHeight;\n    ticker.style.left = `${pos}px`;\n    list.style.left = `${pos}px`;\n  });\n  document.addEventListener('mousemove', e => {\n    cursor.style.left = e.clientX + 'px';\n    cursor.style.top = e.clientY + 'px';\n  });\n  clone();\n  setInterval(moveFirst, 20);\n  setInterval(moveSecond, 20);\n};\n\n\n//# sourceURL=webpack:///./js/modules/ticker-3.js?");
 
 /***/ }),
 

@@ -1,8 +1,8 @@
-const ticker = () => {
+const ticker1 = () => {
   const page = document.querySelector('.page');
   const cursor = document.querySelector('.cursor');
-  const tickerWrapper = document.querySelector('.ticker__wrapper');
-  const ticker = document.querySelector('.ticker__item');
+  const tickerWrapper = document.querySelector('#wrapper_1');
+  const ticker = document.querySelector('#ticker_1');
   let list;
 
   const speed = 1;
@@ -48,15 +48,10 @@ const ticker = () => {
   });
 
   clone();
-  setInterval(moveFirst, 15);
-  setInterval(moveSecond, 15);
+  setInterval(moveFirst, 20);
+  setInterval(moveSecond, 20);
 };
 
 
-export {ticker};
-
-
-
-
-
+export {ticker1};
 
