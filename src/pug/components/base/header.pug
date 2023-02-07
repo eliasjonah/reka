@@ -3,15 +3,39 @@ mixin header(headerMods, currentUrl)
     .header__inner
       .logo
         +icn('icn-logo', 70, 23)
-      .header__nav
-        a(href="#").nav
-          span управление недвижимостью
-          .nav__icon
-        a(href="#").nav
-          span продажа и аренда
-        a(href="#").nav
-          span консалтинг
-          .nav__icon
+      .nav
+        .nav__inner
+          .nav__item
+            .nav__text
+              a(href="#").nav__link управление недвижимостью
+              .nav__icon
+            ul.nav__dropdown
+              li.nav__list
+                a(href="#").nav__list-link технический аудит недвижимости
+              li.nav__list
+                a(href="#").nav__list-link эксплуатация и техническое обслуживание недвижимости
+              li.nav__list
+                a(href="#").nav__list-link пожарная безопасность
+              li.nav__list
+                a(href="#").nav__list-link клининг
+              li.nav__list
+                a(href="#").nav__list-link управление арендными отношениями
+              li.nav__list
+                a(href="#").nav__list-link аварийно-диспетчерская служба
+          .nav__item
+            .nav__text
+              a(href="#").nav__link продажа и аренда
+          .nav__item
+            .nav__text
+              a(href="#").nav__link консалтинг
+              .nav__icon
+            ul.nav__dropdown
+              li.nav__list
+                a(href="#").nav__list-link бухгалтерские и кадровые услуги
+              li.nav__list
+                a(href="#").nav__list-link юридическое сопровождение
+              li.nav__list
+                a(href="#").nav__list-link производственный контроль
       button.btn
         .btn__text
           span связаться с нами

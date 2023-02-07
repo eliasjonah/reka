@@ -1,18 +1,11 @@
 .header {
   background-color: $color-white;
-  border: 1px solid $color-border !important;
   width: 100%;
   position: sticky;
   z-index: 100;
   top: 0;
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  &__nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
