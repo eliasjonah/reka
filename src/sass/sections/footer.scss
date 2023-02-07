@@ -19,38 +19,17 @@
   &__content {
     display: block;
     width: 100%;
+    overflow-y: hidden;
   }
 
   &__head {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-top: 1px solid $color-border-dark;
-    border-bottom: 1px solid $color-border-dark;
-  }
-
-  &__nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 1px;
-      height: 16px;
-      position: absolute;
-      background-color: $color-border-dark;
-      top: 50%;
-      right: 0;
-      text-align: center;
-      transform: translateY(-50%);
-    }
   }
 
   &__foot {
-    margin-left: 148px;
+    margin-left: 149px;
     border-left: 1px solid $color-border-dark;
   }
 

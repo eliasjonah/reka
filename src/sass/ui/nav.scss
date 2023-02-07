@@ -15,6 +15,12 @@
     border-bottom: 1px solid $color-border;
   }
 
+  &--black &__inner {
+    background-color: $color-black;
+    border-top: 1px solid $color-border-dark;
+    border-bottom: 1px solid $color-border-dark;
+  }
+
   &__text {
     position: relative;
     display: flex;
@@ -56,6 +62,11 @@
     }
   }
 
+  &--black &__link {
+    color: $color-white;
+  }
+
+
   &__text:hover &__link {
     color: $color-main;
   }
@@ -82,6 +93,15 @@
 
     &::after {
       transform: rotate(90deg);
+    }
+  }
+
+  &--black &__icon {
+    border: 1px solid $color-border-dark;
+
+    &::before,
+    &::after {
+      background-color: $color-white;
     }
   }
 
@@ -118,6 +138,16 @@
     background-color: $color-white;
     transition: transform $trans-long;
   }
+
+  &--black &__dropdown {
+    padding: 10px 0;
+    border: 1px solid $color-border-dark;
+    background-color: $color-black;
+    border-left: none;
+    border-right: none;
+  }
+
+
 
   &__text:hover ~ &__dropdown,
   &__dropdown:hover {
@@ -159,6 +189,11 @@
     &:active {
       opacity: 0.7;
     }
+  }
+
+  &--black &__list-link {
+    padding: 16px 24px;
+    color: $color-white;
   }
 
   &__list:hover &__list-link {

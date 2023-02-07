@@ -21,18 +21,37 @@ mixin footer(footerMods)
 
       .footer__content
         .footer__head
-          .logo.logo--color-white
-            +icn('icn-logo', 70, 24)
-          .footer__nav
-            a(href="#").nav.nav--color-white
-              span управление недвижимостью
-              .nav__icon
-            a(href="#").nav.nav--color-white
-              span продажа и аренда
-            a(href="#").nav.nav--color-white
-              span консалтинг
-              .nav__icon
-          a(href="#").nav.nav--color-white новости
+          .logo.logo--black
+            +icn('icn-logo', 70, 23)
+          .nav.nav--black
+            .nav__inner
+              .nav__item
+                .nav__text
+                  a(href="#").nav__link управление недвижимостью
+                  .nav__icon
+                ul.nav__dropdown
+                  li.nav__list
+                    a(href="#").nav__list-link технический аудит недвижимости
+                  li.nav__list
+                    a(href="#").nav__list-link эксплуатация и техническое обслуживание недвижимости
+                  li.nav__list
+                    a(href="#").nav__list-link пожарная безопасность
+                  li.nav__list
+                    a(href="#").nav__list-link управление арендными отношениями
+              .nav__item
+                .nav__text
+                  a(href="#").nav__link продажа и аренда
+              .nav__item
+                .nav__text
+                  a(href="#").nav__link консалтинг
+                  .nav__icon
+                ul.nav__dropdown
+                  li.nav__list
+                    a(href="#").nav__list-link бухгалтерские и кадровые услуги
+                  li.nav__list
+                    a(href="#").nav__list-link юридическое сопровождение
+                  li.nav__list
+                    a(href="#").nav__list-link производственный контроль
         .footer__foot
           .footer__contact
             .footer__address
