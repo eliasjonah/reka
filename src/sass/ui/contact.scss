@@ -1,0 +1,54 @@
+.contact {
+  &__name {
+    margin-bottom: 8px;
+    color: $color-gray-dark;
+    @include font-size(12px, 12px);
+    font-weight: 500;
+  }
+  &__offer {
+    margin-bottom: 8px;
+    color: $color-white;
+    @include font-size(20px, 28px);
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    overflow-y: hidden;
+    transition: opacity $trans-base;
+    color: $color-transperent;
+
+    &:hover {
+      color: $color-transperent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &::before,
+    &::after {
+      content: attr(data-offer);
+      display: block;
+      position: absolute;
+      min-width: max-content;
+      color: $color-white;
+      transition: transform $trans-base;
+    }
+
+    &::before {
+      left: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      left: 0;
+      bottom: -100%;
+      color: $color-main;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      transform: translateY(-100%);
+    }
+  }
+}

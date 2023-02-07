@@ -1,0 +1,35 @@
+mixin modal-section()
+
+  section.modal
+    .modal__inner
+      .modal__head
+        .logo.logo--black
+          +icn('icn-logo', 70, 23)
+        .modal__empty
+        .modal__close
+      .modal__content
+        .modal__tagline
+          .modal__header связаться с нами
+          .modal__subheader Закажите обратный звонок, или звоните и пишите нам, чтобы обсудить подробности.
+        .modal__foot
+          .modal__info
+            .contact
+              .contact__name звоните
+              a(href="#" data-offer="8 (800) 200-76-43").contact__offer 8 (800) 200-76-43
+            .contact
+              .contact__name пишите
+              a(href="#" data-offer="info@site.com").contact__offer info@site.com
+          form.form(method="post")
+            .form__field
+              input.form__input(type="text" required)
+              label.form__label ваше имя
+            .form__field
+              input.form__input(type="tel" required)
+              label.form__label телефон
+            .form__field
+              input.form__input(type="email" required)
+              label.form__label e-mail
+            button.btn.form__btn(type="submit")
+              .btn__text
+                span заказать обратный звонок
+                +icn('icn-arrow', 16, 16).btn__arrow

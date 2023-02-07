@@ -1,0 +1,69 @@
+.form {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+
+  &__field {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__input {
+    width: 100%;
+    height: 64px;
+    font-family: 'DrukCyr';
+    @include font-size(48px, 52px);
+    font-weight: 500;
+    outline: none;
+    background-color: $color-transperent;
+    color: $color-white;
+    border: none;
+    border-bottom: 1px solid $color-border-dark;
+    transition: border-bottom $trans-base;
+
+    &:hover {
+      border-bottom: 1px solid $color-white;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $color-white;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    font-family: 'DrukCyr';
+    @include font-size(48px, 52px);
+    font-weight: 500;
+    color: $color-white;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: all $trans-base;
+  }
+
+  &__input:focus ~ &__label,
+  &__input:valid ~ &__label {
+    top: -12px;
+    @include font-size(10px, 12px);
+    color: $color-gray-secondary;
+  }
+
+  &__btn {
+    margin-top: 16px;
+    width: 100%;
+    border: none;
+    text-align: center;
+
+    &:hover,
+    &:active {
+      border: none;
+    }
+  }
+}

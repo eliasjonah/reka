@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content=""><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<!-- CSS only -->
-    <link rel="stylesheet" href="css/style.css?1675776329928">
+    <meta name="description" content=""><!-- CSS only -->
+    <link rel="stylesheet" href="css/style.css?1675802111080">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   </head>
   <body>
@@ -152,11 +151,11 @@
                   <div class="footer__subheader">приезжайте в наш офис</div>
                   <div class="footer__header">г. Москва, ул. Ломоносова, 23, офис 56</div><a class="footer__link" href="#">смотреть на карте</a>
                 </div>
-                <div class="footer__tel">
-                  <div class="footer__subheader">звоните</div><a class="footer__offer" href="#" data-offer="8 (800) 200-76-43">8 (800) 200-76-43</a>
+                <div class="contact">
+                  <div class="contact__name">звоните</div><a class="contact__offer" href="#" data-offer="8 (800) 200-76-43">8 (800) 200-76-43</a>
                 </div>
-                <div class="footer__mail">
-                  <div class="footer__subheader">пишите</div><a class="footer__offer" href="#" data-offer="info@site.com">info@site.com</a>
+                <div class="contact">
+                  <div class="contact__name">пишите</div><a class="contact__offer" href="#" data-offer="info@site.com">info@site.com</a>
                 </div>
                 <div class="footer__fb">
                   <div class="footer__subheader">следите за нами</div>
@@ -179,21 +178,56 @@
           </div>
         </div>
       </footer>
-    </div>
-    <div class="modal modal--preload modal--feedback" data-modal="modal-feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <button class="modal__close btn btn-transparent" data-close-modal aria-label="Закрыть" type="button">
-            <svg class="icn modal__close-icn" width="48" height="48" aria-hidden="true">
-              <use xlink:href="#icn-close"></use>
-            </svg>
-          </button>
-          <div class="modal__content-in">
-            <div class="modal-feedback">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, nostrum exercitationem! Sapiente commodi, cumque, saepe tenetur delectus odio sequi inventore cum sit nemo voluptate, porro suscipit fugiat modi eligendi eum.</div>
+      <section class="modal">
+        <div class="modal__inner">
+          <div class="modal__head">
+            <div class="logo logo--black">
+              <svg class="icn" width="70" height="23" aria-hidden="true">
+                <use xlink:href="#icn-logo"></use>
+              </svg>
+            </div>
+            <div class="modal__empty"></div>
+            <div class="modal__close"></div>
+          </div>
+          <div class="modal__content">
+            <div class="modal__tagline">
+              <div class="modal__header">связаться с нами</div>
+              <div class="modal__subheader">Закажите обратный звонок, или звоните и пишите нам, чтобы обсудить подробности.</div>
+            </div>
+            <div class="modal__foot">
+              <div class="modal__info">
+                <div class="contact">
+                  <div class="contact__name">звоните</div><a class="contact__offer" href="#" data-offer="8 (800) 200-76-43">8 (800) 200-76-43</a>
+                </div>
+                <div class="contact">
+                  <div class="contact__name">пишите</div><a class="contact__offer" href="#" data-offer="info@site.com">info@site.com</a>
+                </div>
+              </div>
+              <form class="form" method="post">
+                <div class="form__field">
+                  <input class="form__input" type="text" required>
+                  <label class="form__label">ваше имя</label>
+                </div>
+                <div class="form__field">
+                  <input class="form__input" type="tel" required>
+                  <label class="form__label">телефон</label>
+                </div>
+                <div class="form__field">
+                  <input class="form__input" type="email" required>
+                  <label class="form__label">e-mail</label>
+                </div>
+                <button class="btn form__btn" type="submit">
+                  <div class="btn__text"><span>заказать обратный звонок</span>
+                    <svg class="icn btn__arrow" width="16" height="16" aria-hidden="true">
+                      <use xlink:href="#icn-arrow"></use>
+                    </svg>
+                  </div>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>

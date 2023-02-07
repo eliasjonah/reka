@@ -49,6 +49,8 @@
   &__picture {
     position: relative;
     transition: transform $trans-long;
+    width: 100%;
+    height: 100%;
 
     img {
       width: 100%;
@@ -91,10 +93,18 @@
 
   &__subheader {
     position: relative;
+    margin-top: 0;
     margin-bottom: 0;
     @include font-size(32px, 32px);
     font-weight: 700;
     z-index: 2;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
   }
 
   &__item {
@@ -104,8 +114,8 @@
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
-    gap: 12px;
     height: 50%;
+    gap: 12px;
     color: $color-black;
     text-decoration: none;
     z-index: 2;
