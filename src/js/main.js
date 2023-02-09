@@ -4,6 +4,7 @@ import {powersSlider} from './modules/powers-slider';
 import {ticker1} from './modules/ticker-1';
 import {ticker2} from './modules/ticker-2';
 import {ticker3} from './modules/ticker-3';
+import {modal} from './modules/modal';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,4 +18,5 @@ window.addEventListener('load', () => {
   ticker1();
   ticker2();
   ticker3();
+  modal();
 });

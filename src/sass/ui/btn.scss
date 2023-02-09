@@ -12,6 +12,7 @@
   z-index: 2;
   transition: opacity $trans-base;
   border-radius: 0;
+  cursor: pointer;
 
   &:hover {
     border: 1px solid $color-border;
