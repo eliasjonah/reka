@@ -1,0 +1,48 @@
+mixin menu-section()
+  section.menu.open
+    .menu__inner
+      .menu__head
+        .header
+          .header__inner
+            .logo
+              +icn('icn-logo', 70, 23)
+            .menu__empty
+            button.btn.menu__close
+              .btn__text
+                .menu__cross
+                span закрыть
+      .menu__content
+        .menu__nav.nav.nav--black
+          .nav__inner
+            .nav__item
+              .nav__text
+                a(href="#").nav__link управление недвижимостью
+                .nav__icon
+              ul.nav__dropdown
+                li.nav__list
+                  a(href="#").nav__list-link технический аудит недвижимости
+                li.nav__list
+                  a(href="#").nav__list-link эксплуатация и техническое обслуживание недвижимости
+                li.nav__list
+                  a(href="#").nav__list-link пожарная безопасность
+                li.nav__list
+                  a(href="#").nav__list-link управление арендными отношениями
+            .nav__item
+              .nav__text
+                a(href="#").nav__link продажа и аренда
+            .nav__item
+              .nav__text
+                a(href="#").nav__link консалтинг
+                .nav__icon
+              ul.nav__dropdown
+                li.nav__list
+                  a(href="#").nav__list-link бухгалтерские и кадровые услуги
+                li.nav__list
+                  a(href="#").nav__list-link юридическое сопровождение
+                li.nav__list
+                  a(href="#").nav__list-link производственный контроль
+
+        button.btn.menu__btn.modal__open
+          .btn__text
+            span связаться с нами
+            +icn('icn-arrow', 16, 16).btn__arrow

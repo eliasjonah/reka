@@ -3,7 +3,7 @@ mixin header(headerMods, currentUrl)
     .header__inner
       .logo
         +icn('icn-logo', 70, 23)
-      .nav
+      .nav.header__nav
         .nav__inner
           .nav__item
             .nav__text
@@ -34,7 +34,14 @@ mixin header(headerMods, currentUrl)
                 a(href="#").nav__list-link юридическое сопровождение
               li.nav__list
                 a(href="#").nav__list-link производственный контроль
-      button.btn.modal__open
+      button.btn.modal__open.header__modal
         .btn__text
           span связаться с нами
           +icn('icn-arrow', 16, 16).btn__arrow
+      button.btn.header__menu.menu__open
+        .btn__text
+          .header__burger
+            span.header__line.header__line--one
+            span.header__line.header__line--two
+            span.header__line.header__line--three
+          span меню

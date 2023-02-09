@@ -5,6 +5,7 @@ import {ticker1} from './modules/ticker-1';
 import {ticker2} from './modules/ticker-2';
 import {ticker3} from './modules/ticker-3';
 import {modal} from './modules/modal';
+import {menu} from './modules/menu';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,9 +15,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // в load следует добавить скрипты, не участвующие в работе первого экрана
 window.addEventListener('load', () => {
-  powersSlider();
-  ticker1();
-  ticker2();
-  ticker3();
+  // powersSlider();
+  // ticker1();
+  // ticker2();
+  // ticker3();
   modal();
+  menu();
+
 });

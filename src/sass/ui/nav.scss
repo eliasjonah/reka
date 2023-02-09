@@ -130,13 +130,15 @@
     position: absolute;
     width: 100%;
     transform: translateY(-100%);
-    left: 0;
+    left: -1px;
     right: 0;
     z-index: -100;
     padding: 12px 0;
+    display: block;
+    opacity: 0;
     border: 1px solid $color-border;
     background-color: $color-white;
-    transition: transform $trans-long;
+    transition: transform $trans-long, opacity $trans-long;
   }
 
   &--black &__dropdown {
@@ -147,10 +149,9 @@
     border-right: none;
   }
 
-
-
   &__text:hover ~ &__dropdown,
   &__dropdown:hover {
+    opacity: 1;
     transform: translateY(0);
   }
 
