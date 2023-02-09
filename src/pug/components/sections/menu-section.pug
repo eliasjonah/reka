@@ -1,5 +1,5 @@
 mixin menu-section()
-  section.menu.open
+  section.menu
     .menu__inner
       .menu__head
         .header
@@ -14,7 +14,7 @@ mixin menu-section()
       .menu__content
         .menu__nav.nav.nav--black
           .nav__inner
-            .nav__item
+            .nav__item.menu__item
               .nav__text
                 a(href="#").nav__link управление недвижимостью
                 .nav__icon
@@ -30,7 +30,7 @@ mixin menu-section()
             .nav__item
               .nav__text
                 a(href="#").nav__link продажа и аренда
-            .nav__item
+            .nav__item.menu__item
               .nav__text
                 a(href="#").nav__link консалтинг
                 .nav__icon
