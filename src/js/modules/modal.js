@@ -15,7 +15,7 @@ const modal = () => {
 
   modalClose.addEventListener('click', () => {
     modal.classList.remove('open');
-    html.classList.add('open');
+    html.classList.remove('open');
   });
 
 }

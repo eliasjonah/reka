@@ -151,6 +151,7 @@
 
   &__text:hover ~ &__dropdown,
   &__dropdown:hover {
+    z-index: 200;
     opacity: 1;
     transform: translateY(0);
   }

@@ -21,7 +21,6 @@
     border-top: 1px solid $color-border;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
   }
 
   &__item {
@@ -108,5 +107,51 @@
 
   &__item:hover &__arrow {
     transform: rotate(90deg);
+  }
+
+
+  // Media
+
+  @media (max-width: 1200px) {
+    &__cards {
+      border-bottom: none;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      border-bottom: 1px solid $color-border;
+
+      &:nth-child(2) {
+        border-right: 1px solid $color-border;
+      }
+    }
+  }
+
+  @media (max-width: 996px) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__inner {
+      margin: 0 16px;
+    }
+
+    &__header {
+      @include font-size(40px, 40px);
+    }
+
+    &__cards {
+      border: none;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      border: 1px solid $color-border;
+      border-top: none;
+      padding: 0 16px 16px 16px;
+
+      &:nth-child(1) {
+        border-top: 1px solid $color-border;
+      }
+    }
   }
 }

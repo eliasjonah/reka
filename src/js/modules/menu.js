@@ -16,7 +16,7 @@ const menu = () => {
 
   menuClose.addEventListener('click', () => {
     menu.classList.remove('open');
-    html.classList.add('open');
+    html.classList.remove('open');
   });
 
   menuItems.forEach(item => {

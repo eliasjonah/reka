@@ -59,4 +59,57 @@
     font-weight: 500;
     color: $color-gray-secondary;
   }
+
+
+  // Media
+
+  @media (max-width: 1236px) {
+    &__content {
+      background-position-x: 236px;
+    }
+    &__header {
+      margin: 0;
+      @include font-size(48px, 48px);
+    }
+
+    &__subheader {
+      @include font-size(28px, 30px);
+    }
+
+    &__text {
+      @include font-size(12px, 12px);
+    }
+  }
+
+  @media (max-width: 996px) {
+    &__content {
+      background-position-x: -100px;
+      background-size: 648px;
+    }
+    &__header {
+      margin: 0;
+      padding: 16px;
+      @include font-size(48px, 48px);
+    }
+
+    &__foot {
+      width: 100%;
+      padding: 16px;
+    }
+
+    &__subheader {
+      @include font-size(28px, 30px);
+    }
+
+    &__text {
+      @include font-size(12px, 12px);
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__content {
+      background-position-x: -70px;
+      background-size: 480px;
+    }
+  }
 }

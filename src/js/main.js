@@ -15,11 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // в load следует добавить скрипты, не участвующие в работе первого экрана
 window.addEventListener('load', () => {
-  // powersSlider();
-  // ticker1();
-  // ticker2();
-  // ticker3();
+  powersSlider();
+  ticker1();
+  ticker2();
+  ticker3();
   modal();
   menu();
-
 });
