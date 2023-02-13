@@ -11,6 +11,17 @@
     justify-content: flex-start;
   }
 
+  &__nav {
+    position: relative;
+    z-index: 300;
+
+    .nav__text:hover ~ .nav__dropdown,
+    .nav__dropdown:hover {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   &__menu {
     max-height: 68px;
     display: none;

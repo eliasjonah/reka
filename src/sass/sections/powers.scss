@@ -177,10 +177,11 @@
   }
 
   &__btn {
-    padding: 12px 16px;
+    padding: 12px 17px;
     border: 1px solid $color-border-dark;
     border-radius: 100px;
     transition: opacity $trans-base;
+    outline: none;
 
     &:hover {
       opacity: 0.8;
@@ -210,6 +211,12 @@
 
   // Media
 
+  @media (max-width: 1400px) {
+    &__buttons {
+      left: 22%;
+    }
+  }
+
   @media (max-width: 1200px) {
     &__header {
       max-width: 500px;
@@ -225,6 +232,20 @@
       height: auto;
       position: initial;
       grid-template-columns: 100%;
+      border-bottom: none;
+    }
+
+    &__img {
+      border-left: none;
+      border-top: 1px solid $color-border-dark;
+      border-bottom: 1px solid $color-border-dark;
+
+    }
+
+    &__slider {
+      border-left: none;
+      border-top: 1px solid $color-border-dark;
+      border-bottom: 1px solid $color-border-dark;
     }
 
     &__buttons {
@@ -234,5 +255,17 @@
 
   @media (max-width: 768px) {
     padding-top: 64px;
+
+    &__header {
+      padding: 0 15px;
+    }
+
+    &__count {
+      padding: 24px 15px;
+    }
+
+    &__info {
+      padding: 24px 15px;
+    }
   }
 }

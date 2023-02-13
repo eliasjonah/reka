@@ -1,6 +1,7 @@
 .map {
   margin: 0 40px 450px 40px;
   position: relative;
+  overflow-x: clip;
 
   &__inner {
     position: absolute;
@@ -19,9 +20,10 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    background-image: url(../img/bg/map-desk.svg);
+    background-image: url('/img/bg/map-desk.jpg');
     background-repeat: no-repeat;
     background-position: right;
+    background-size: inherit;
   }
 
   &__header {
@@ -82,6 +84,8 @@
   }
 
   @media (max-width: 996px) {
+    margin: 0 16px 450px 16px;
+
     &__content {
       background-position-x: -100px;
       background-size: 648px;

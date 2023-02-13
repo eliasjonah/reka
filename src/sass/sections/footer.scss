@@ -4,8 +4,9 @@
   bottom: 0;
   margin-top: auto;
   height: 100vh;
-  border: 1px solid $color-border-dark;
+  width: 100%;
   background-color: $color-black;
+  overflow: hidden;
 
   &__inner {
     height: 100%;
@@ -15,34 +16,86 @@
     justify-content: space-between;
   }
 
+  &__ticker {
+    flex-grow: 1;
+    width: 100%;
+  }
+
   &__content {
     display: block;
     width: 100%;
-    overflow-y: hidden;
-    border-left: 1px solid $color-border-dark;
+    overflow: hidden;
+    border: 1px solid $color-border-dark;
+    border-top: none;
   }
 
   &__head {
+    width: 100%;
+    background-color: $color-black;
+  }
+
+  &__head-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 
+    .nav {
+      &__inner {
+        background-color: $color-black;
+        border-top: 1px solid $color-border-dark;
+        border-bottom: 1px solid $color-border-dark;
+      }
+
+      &__text {
+        &::after {
+          background-color: $color-border-dark;
+        }
+      }
+
+      &__link {
+        color: $color-white;
+      }
+
+
+      &__icon {
+        border: 1px solid $color-border-dark;
+
+        &::before,
+        &::after {
+          background-color: $color-white;
+        }
+      }
+
+      &__dropdown {
+        padding: 8px 0;
+        border: 1px solid $color-border-dark;
+        background-color: $color-black;
+      }
+
+      &__list-link {
+        color: $color-white;
+        padding: 16px 24px;
+      }
+
+      &.open {
+        transform: translateY(0);
+      }
+
+      &__text:hover ~ &__dropdown,
+      &__dropdown:hover {
+        transform: translateY(0);
+      }
+    }
+
     .logo {
-      border-left: none;
-      padding: 21.5px 39.5px;
-    }
 
-    .nav__dropdown {
-      z-index: 1;
       border: 1px solid $color-border-dark;
-    }
+      padding-left: 40px;
+      border-left: none;
 
-    .nav__dropdown.open {
-      position: relative;
-      z-index: 200;
-      opacity: 1;
-      transform: translateY(0);
-      border: none;
+      svg {
+        color: $color-white;
+      }
     }
   }
 
@@ -143,11 +196,76 @@
   }
 
 
+
   // Media
+
+  @media (min-width: 1020px) {
+    &__head {
+      .nav__text:hover ~ .nav__dropdown,
+      .nav__dropdown:hover {
+        transform: translateY(0);
+      }
+    }
+  }
 
   @media (max-width: 1020px) {
     position: inherit;
     height: auto;
+
+    &__head-wrapper {
+      flex-direction: column;
+
+      .logo {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        border: 1px solid $color-border-dark;
+
+        svg {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &__nav {
+      width: 100%;
+
+      .nav__inner {
+        flex-direction: column;
+        border-top: 0;
+        padding: 24px 0;
+
+        .nav__item {
+          width: 100%;
+        }
+
+        .nav__text {
+          padding: 24px 20px;
+          justify-content: center;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        .nav__dropdown {
+          transition: none;
+          opacity: 0;
+        }
+
+        .nav__dropdown.open {
+          position: relative;
+          opacity: 1;
+          transform: translateY(0);
+          z-index: 1;
+          transition: opacity $trans-base;
+        }
+
+        .nav__list-link {
+          text-align: center;
+        }
+      }
+    }
 
     &__foot {
       margin-left: 0;
@@ -156,29 +274,6 @@
   }
 
   @media (max-width: 830px) {
-
-    &__head {
-      flex-direction: column;
-
-      .logo {
-        width: 100%;
-        border-right: none;
-        border-bottom: none;
-
-        svg {
-          margin: 0 auto;
-        }
-      }
-
-      .nav {
-        width: 100%;
-
-        &__inner {
-          flex-direction: column;
-        }
-      }
-    }
-
     &__contact {
       flex-direction: column;
       text-align: center;
@@ -186,11 +281,13 @@
     }
 
     &__end {
+      padding: 12px 14px;
       flex-direction: column;
     }
 
     &__about {
       flex-direction: column;
+      text-align: center;
     }
 
     &__company {

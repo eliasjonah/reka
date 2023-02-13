@@ -1,57 +1,61 @@
 mixin footer(footerMods)
   footer.footer
     .footer__inner
-      .ticker.modal__open
-        .cursor
-          .cursor__wrapper
-            .cursor__text заказать обратный звонок
-        .ticker__inner
-          .ticker__wrapper#wrapper_1
-            .ticker__item#ticker_1
-              .ticker__text.ticker__text--color-white Закажите обратный звонок, чтобы обсудить подробности
-              .ticker__text.ticker__text--color-black Закажите обратный звонок, чтобы обсудить подробности
-          .ticker__wrapper#wrapper_2
-            .ticker__item#ticker_2
-              .ticker__text.ticker__text--color-white Закажите обратный звонок, чтобы обсудить подробности
-              .ticker__text.ticker__text--color-black Закажите обратный звонок, чтобы обсудить подробности
-          .ticker__wrapper#wrapper_3
-            .ticker__item#ticker_3
-              .ticker__text.ticker__text--color-black Закажите обратный звонок, чтобы обсудить подробности
-              .ticker__text.ticker__text--color-white Закажите обратный звонок, чтобы обсудить подробности
+      .footer__ticker
+        .ticker.modal__open
+          .cursor
+            .cursor__wrapper
+              .cursor__text заказать обратный звонок
+          .ticker__inner
+            .ticker__wrapper#wrapper_1
+              .ticker__item#ticker_1
+                .ticker__text.ticker__text--color-white Закажите обратный звонок, чтобы обсудить подробности
+                .ticker__text.ticker__text--color-black Закажите обратный звонок, чтобы обсудить подробности
+            .ticker__wrapper#wrapper_2
+              .ticker__item#ticker_2
+                .ticker__text.ticker__text--color-white Закажите обратный звонок, чтобы обсудить подробности
+                .ticker__text.ticker__text--color-black Закажите обратный звонок, чтобы обсудить подробности
+            .ticker__wrapper#wrapper_3
+              .ticker__item#ticker_3
+                .ticker__text.ticker__text--color-black Закажите обратный звонок, чтобы обсудить подробности
+                .ticker__text.ticker__text--color-white Закажите обратный звонок, чтобы обсудить подробности
 
       .footer__content
         .footer__head
-          .logo.logo--black
-            +icn('icn-logo', 70, 23)
-          .nav.nav--black
-            .nav__inner
-              .nav__item.menu__item
-                .nav__text
-                  a(href="#").nav__link управление недвижимостью
-                  .nav__icon
-                ul.nav__dropdown
-                  li.nav__list
-                    a(href="#").nav__list-link технический аудит недвижимости
-                  li.nav__list
-                    a(href="#").nav__list-link эксплуатация и техническое обслуживание недвижимости
-                  li.nav__list
-                    a(href="#").nav__list-link пожарная безопасность
-                  li.nav__list
-                    a(href="#").nav__list-link управление арендными отношениями
-              .nav__item
-                .nav__text
-                  a(href="#").nav__link продажа и аренда
-              .nav__item.menu__item
-                .nav__text
-                  a(href="#").nav__link консалтинг
-                  .nav__icon
-                ul.nav__dropdown
-                  li.nav__list
-                    a(href="#").nav__list-link бухгалтерские и кадровые услуги
-                  li.nav__list
-                    a(href="#").nav__list-link юридическое сопровождение
-                  li.nav__list
-                    a(href="#").nav__list-link производственный контроль
+          .footer__head-wrapper
+            .logo
+              +icn('icn-logo', 70, 23)
+            .nav.footer__nav
+              .nav__inner
+                .nav__item.menu__item
+                  .nav__text
+                    a(href="#").nav__link управление недвижимостью
+                    .nav__icon
+                  ul.nav__dropdown
+                    li.nav__list
+                      a(href="#").nav__list-link технический аудит недвижимости
+                    li.nav__list
+                      a(href="#").nav__list-link эксплуатация и техническое обслуживание недвижимости
+                    li.nav__list
+                      a(href="#").nav__list-link пожарная безопасность
+                    li.nav__list
+                      a(href="#").nav__list-link управление арендными отношениями
+                .nav__item
+                  .nav__text
+                    a(href="#").nav__link продажа и аренда
+                .nav__item.menu__item
+                  .nav__text
+                    a(href="#").nav__link консалтинг
+                    .nav__icon
+                  ul.nav__dropdown
+                    li.nav__list
+                      a(href="#").nav__list-link бухгалтерские и кадровые услуги
+                    li.nav__list
+                      a(href="#").nav__list-link юридическое сопровождение
+                    li.nav__list
+                      a(href="#").nav__list-link производственный контроль
+
+
         .footer__foot
           .footer__contact
             .footer__address

@@ -2,9 +2,10 @@
   position: fixed;
   z-index: 110;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 0;
   visibility: hidden;
+  overflow: scroll;
   transition: opacity $trans-base, visibility $trans-base;
 
   &.open {
@@ -92,8 +93,9 @@
     background-color: $color-black;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
+    position: relative;
     transform: translateY(100%);
     transition: transform $trans-long;
   }
@@ -104,10 +106,15 @@
 
   &__btn {
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 111;
   }
 
   &__nav {
     overflow: hidden;
+    width: 100%;
 
     .nav__inner {
       flex-direction: column;
@@ -115,10 +122,12 @@
       overflow: hidden;
       background-color: $color-black;
       border: none;
+      margin-bottom: 116px;
     }
 
     .nav__item {
       overflow: hidden;
+      width: 100%;
     }
 
     .nav__text {
@@ -126,19 +135,20 @@
       background-color: $color-black;
     }
 
-    .nav__item:hover .nav__dropdown {
-      position: relative;
-      transform: translateY(0);
-      z-index: 110;
+    .nav__dropdown {
+      transition: none;
+      opacity: 0;
     }
 
     .nav__dropdown.open {
-      position: relative;
       transform: translateY(0);
-      z-index: 110;
+      position: relative;
       opacity: 1;
+      z-index: 110;
+      transition: opacity $trans-base;
     }
   }
+
 
   // Media
 

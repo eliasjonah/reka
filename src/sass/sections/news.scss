@@ -157,6 +157,10 @@
   @media (max-width: 1130px) {
     padding: 64px 0;
 
+    &__inner {
+      margin: 0 16px;
+    }
+
     &__header {
       margin-top: 0;
       margin-bottom: 24px;

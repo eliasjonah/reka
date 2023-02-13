@@ -80,11 +80,18 @@
     }
 
     &__header {
-      @include font-size(48px, 48px);
+      @include font-size(42px, 42px);
     }
 
     &__subheader {
       @include font-size(16px, 22px);
     }
   }
+
+  @media (max-width: 360px) {
+    &__header {
+      @include font-size(40px, 40px);
+    }
+  }
 }
+

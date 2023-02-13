@@ -7,14 +7,17 @@
   box-sizing: border-box;
   position: relative;
 
-
-
   &__core {
     width: 100%;
     flex: 0 0 auto;
   }
 }
 
-html.open {
+body {
+  overflow: auto;
+}
+
+body.open,
+body.is-open {
   overflow: hidden;
 }
